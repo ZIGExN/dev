@@ -2,8 +2,9 @@ AllCops:
   # Includes:
   #   - Rakefile
   #   - config.ru
-  Excludes:
+  Exclude:
     - vendor/**
+    - db/migrate/**
 
 Encoding:
   Enabled: false
@@ -74,4 +75,19 @@ RescueModifier:
   Enabled: false
 
 SpaceInsideHashLiteralBraces:
+  Enabled: false
+
+WordArray:
+  Enabled: false
+
+NumericLiterals:
+  Enabled: false
+
+RedundantReturn:
+  Enabled: false
+
+ReduceArguments:
+  Enabled: false
+
+RescueException:
   Enabled: false
