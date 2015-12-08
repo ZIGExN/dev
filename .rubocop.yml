@@ -1,93 +1,42 @@
 AllCops:
-  # Includes:
-  #   - Rakefile
-  #   - config.ru
-  Exclude:
-    - vendor/**
-    - db/migrate/**
+  RunRailsCops: true
 
-Encoding:
+# コメントをAscii文字に限定するか
+Style/AsciiComments:
   Enabled: false
 
-# 日本語でのコメントを許可
-AsciiComments:
+# 1行の最大文字列長を制限するか
+Style/LineLength:
+  Max: 160
+
+# %でのsprintfを無効にするか
+Style/FormatString:
   Enabled: false
 
-# 1行の最大長制限を緩和
-LineLength:
-  Enabled: true
-  # Max: 79
-  Max: 250
+# メソッド定義の行数を制限するか
+Style/MethodLength:
+  Max: 50
 
-# %でのsprintfを許容
-FavorSprintf:
+# 複数行の空白を制限するか
+Style/EmptyLines:
   Enabled: false
 
-# メソッド定義の行数制限
-MethodLength:
-  # Max: 10
-  Max: 150
-
-# 複数行の空白
-EmptyLines:
+# top-classでのコメントを必須にするか
+Style/Documentation:
   Enabled: false
 
-# 複数行ブロックに{}の使用を不可
-Blocks:
-  Enabled: true
-
-# class内での不要なselfの利用制限
-RedundantSelf:
+# 1行if文を強制するか
+Style/IfUnlessModifier:
   Enabled: false
 
-# top-classでのコメント?
-Documentation:
+# 文字列をシングルクォートに強制するか
+Style/StringLiterals:
   Enabled: false
 
-# 1行if文にしなくてもよい
-IfUnlessModifier:
+# ruby1.9形式のハッシュ形式(:key => value)を無効にするか
+Style/HashSyntax:
   Enabled: false
 
-# { }の周りにスペースをいれなくてもいい
-SpaceAroundBraces:
-  Enabled: false
-
-# シングルクォートの推奨を無効
-StringLiterals:
-  Enabled: false
-
-HashSyntax:
-  Enabled: false
-
-CollectionMethods:
-  Enabled: false
-
-Semicolon:
-  Enabled: false
-
-BlockAlignment:
-  Enabled: false
-
-EndAlignment:
-  Enabled: false
-
-RescueModifier:
-  Enabled: false
-
-SpaceInsideHashLiteralBraces:
-  Enabled: false
-
-WordArray:
-  Enabled: false
-
-NumericLiterals:
-  Enabled: false
-
-RedundantReturn:
-  Enabled: false
-
-ReduceArguments:
-  Enabled: false
-
-RescueException:
-  Enabled: false
+# 文字列のみの配列作成時に%w()形式を強制するか
+Style/WordArray:
+  MinSize: 5
